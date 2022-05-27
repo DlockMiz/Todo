@@ -61,13 +61,13 @@ const Todo: FC<TodoProps> = ({title}) => {
                 <Stack spacing={2} sx={{width: "40%", marginTop: "10%"}}>
                     <div>
                         <Grid container spacing={2} alignItems="center">
-                            <Grid item xs={8} sx={{backgroundColor: "white"}}>
+                            <Grid item xs={8}>
                                 <TextField onChange={(typed) => setTask(typed.target.value)} value={task}  sx={{width: "100%"}} id="outlined-basic" label="Add Todo..." variant="outlined"/>
                             </Grid>
-                            <Grid item xs={2} sx={{backgroundColor: "white"}}>
+                            <Grid item xs={2}>
                                 <Button onClick={() => addTask()} variant="contained" color="success" sx={{ height: "100%", width: "100%"}}>Add</Button>
                             </Grid>
-                            <Grid item xs={2} sx={{backgroundColor: "white"}}>
+                            <Grid item xs={2}>
                                 <Button onClick={() => bulkRemoveTasks()} variant="contained" color="error" sx={{height: "100%", width: "100%"}}>Delete</Button>
                             </Grid>
                         </Grid>
